@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run _encrypt",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "npm run dev",
+    "_encrypt": "npx staticrypt dist/index.html -d dist/ --short --template-color-primary '#40205F' --template-color-secondary '#068D80' --template-button 'Enter Securely' --template-title 'Aastha Health Plus'"
   },
   "dependencies": {
     "react": "^18.2.0",
